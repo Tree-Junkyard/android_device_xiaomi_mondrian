@@ -11,6 +11,9 @@ $(call inherit-product, device/xiaomi/mondrian/device.mk)
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherti from MIUI Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
 PRODUCT_NAME := aosp_mondrian
 PRODUCT_DEVICE := mondrian
 PRODUCT_MANUFACTURER := Xiaomi
